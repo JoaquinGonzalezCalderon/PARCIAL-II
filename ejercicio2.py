@@ -55,14 +55,13 @@ print("Punto B: ")
 #usamos kruskal para el arbol de expansion minima
 grafoexpansionminima = grafoSW.kruskal("Luke Skywalker")
 #y aca verificamos si tiene a yoda
-tieneyoda = any("Yoda" in arista for arista in grafoexpansionminima)
+for arista in grafoexpansionminima:
+    if "Yoda" in arista:
+        print(f"Yoda está en el árbol de expansión mínima")
+    else:
+        print(f"Yoda no está en el árbol de expansión mínima")
 print("")
-if tieneyoda:
-    print("Yoda está en el Árbol de Expansión Mínima")
-else:
-    print("Yoda no está en el Árbol de Expansión Mínima")
-print("")
-print("Grafo Kruskal: ",grafoexpansionminima)
+print("Grafo de Expansion Minima: ",grafoexpansionminima)
 print("")
 
 #C
