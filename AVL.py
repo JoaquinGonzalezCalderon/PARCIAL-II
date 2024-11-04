@@ -266,13 +266,4 @@ class ARBOLAVL:
     
     #funcion nueva para el parcial
 
-    def inordennuevo(self):
-        def _inordennuevo(root):
-            if root is not None:
-                _inordennuevo(root.left)
-                print(f"Número: {root.value}, Nombre: {root.other_value.get('name')}")
-                _inordennuevo(root.right)
-
-        if self.root is not None:
-            _inordennuevo(self.root)
 

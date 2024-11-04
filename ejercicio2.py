@@ -51,9 +51,10 @@ grafoSW.insert_arista("Chewbacca", "R2-D2", 3)
 grafoSW.insert_arista("Chewbacca", "Leia", 4)
 
 #B
-
+print("Punto B: ")
+#usamos kruskal para el arbol de expansion minima
 grafoexpansionminima = grafoSW.kruskal("Luke Skywalker")
-
+#y aca verificamos si tiene a yoda
 tieneyoda = any("Yoda" in arista for arista in grafoexpansionminima)
 print("")
 if tieneyoda:
@@ -65,11 +66,10 @@ print("Grafo Kruskal: ",grafoexpansionminima)
 print("")
 
 #C
-
-# Buscar el máximo número de episodios compartidos entre dos personajes
+print("Punto C: ")
 episodiosmaximo = 0
 parpersonajes = None
-
+#ahora vemos nodo x nodo para ver los personajes y recopilar el maximo
 for nodo in grafoSW.elements:
     for aristas in nodo['aristas']:
         if aristas['peso'] > episodiosmaximo:
@@ -80,5 +80,3 @@ print("Máximo número de episodios compartidos:", episodiosmaximo)
 print("")
 print("Personajes que los comparten:", parpersonajes)
 print("")
-
-#D
